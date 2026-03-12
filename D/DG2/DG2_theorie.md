@@ -1,7 +1,7 @@
 ---
-title: DG2 — Massnahmen zur Leistungsverbesserung aufzählen
-parent: Home
-nav_order: 13
+title: "DG2"
+parent: "D — Refactoring & Optimierung"
+nav_order: 4
 ---
 
 # DG2 — Massnahmen zur Leistungsverbesserung aufzählen

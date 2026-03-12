@@ -1,6 +1,7 @@
 ---
-title: C1G — Algorithmus erklären
-parent: Home
+title: "C1G"
+parent: "C — Umsetzung"
+nav_order: 1
 ---
 
 # C1G — Algorithmus erklären

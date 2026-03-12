@@ -1,7 +1,7 @@
 ---
-title: DF1 — Refactoring-Techniken anwenden
-parent: Home
-nav_order: 11
+title: "DF1"
+parent: "D — Refactoring & Optimierung"
+nav_order: 2
 ---
 
 # DF1 — Refactoring-Techniken anwenden

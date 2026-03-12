@@ -1,6 +1,7 @@
 ---
-title: BE2 — Design transferieren
-parent: Home
+title: "BE2"
+parent: "B — Anforderungen & Design"
+nav_order: 6
 ---
 
 # BE2 — Design transferieren

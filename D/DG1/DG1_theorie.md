@@ -1,7 +1,7 @@
 ---
-title: DG1 — Refactoring-Techniken aufzählen
-parent: Home
-nav_order: 10
+title: "DG1"
+parent: "D — Refactoring & Optimierung"
+nav_order: 1
 ---
 
 # DG1 — Refactoring-Techniken aufzählen

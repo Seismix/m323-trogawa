@@ -1,6 +1,7 @@
 ---
-title: BF2 — Functional Design entwerfen
-parent: Home
+title: "BF2"
+parent: "B — Anforderungen & Design"
+nav_order: 5
 ---
 
 # BF2 — Functional Design entwerfen

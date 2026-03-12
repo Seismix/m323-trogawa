@@ -1,7 +1,7 @@
 ---
-title: DE2 — Effiziente Algorithmen und Datenstrukturen auswählen
-parent: Home
-nav_order: 15
+title: "DE2"
+parent: "D — Refactoring & Optimierung"
+nav_order: 6
 ---
 
 # DE2 — Effiziente Algorithmen und Datenstrukturen auswählen

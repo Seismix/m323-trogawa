@@ -1,7 +1,7 @@
 ---
-title: DF2 — Massnahmen zur Leistungsverbesserung umsetzen
-parent: Home
-nav_order: 14
+title: "DF2"
+parent: "D — Refactoring & Optimierung"
+nav_order: 5
 ---
 
 # DF2 — Massnahmen zur Leistungsverbesserung umsetzen

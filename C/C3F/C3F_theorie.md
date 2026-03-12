@@ -1,6 +1,7 @@
 ---
-title: C3F — Lambda-Ausdrücke mit mehreren Argumenten
-parent: Home
+title: "C3F"
+parent: "C — Umsetzung"
+nav_order: 8
 ---
 
 # C3F — Lambda-Ausdrücke mit mehreren Argumenten

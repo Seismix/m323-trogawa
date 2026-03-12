@@ -1,7 +1,7 @@
 ---
-title: DE1 — Auswirkungen des Refactorings einschätzen
-parent: Home
-nav_order: 12
+title: "DE1"
+parent: "D — Refactoring & Optimierung"
+nav_order: 3
 ---
 
 # DE1 — Auswirkungen des Refactorings einschätzen
