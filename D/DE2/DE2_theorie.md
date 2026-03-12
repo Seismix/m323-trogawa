@@ -18,4 +18,4 @@ Die fortgeschrittenste Kompetenz im Performance-Bereich:
 
 ## Codebeispiel
 
-Siehe [`algorithmen_datenstrukturen.py`](algorithmen_datenstrukturen.py) für ein vollständiges, kommentiertes Beispiel mit Benchmarks.
+Siehe [`algorithmen_datenstrukturen.py`](https://github.com/Seismix/m323-trogawa/blob/main/D/DE2/algorithmen_datenstrukturen.py) für ein vollständiges, kommentiertes Beispiel mit Benchmarks.

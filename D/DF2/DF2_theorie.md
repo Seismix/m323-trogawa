@@ -18,4 +18,4 @@ Hier geht es darum, Performance-Optimierungen **praktisch umzusetzen**:
 
 ## Codebeispiel
 
-Siehe [`performance_optimierung.py`](performance_optimierung.py) für ein vollständiges, kommentiertes Beispiel mit Zeitmessungen, das alle drei Techniken demonstriert.
+Siehe [`performance_optimierung.py`](https://github.com/Seismix/m323-trogawa/blob/main/D/DF2/performance_optimierung.py) für ein vollständiges, kommentiertes Beispiel mit Zeitmessungen, das alle drei Techniken demonstriert.

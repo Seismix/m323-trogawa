@@ -18,7 +18,7 @@ Refactoring soll das **Verhalten** des Codes nicht verändern — nur seine **St
 
 ## Codebeispiel
 
-Siehe [`refactoring_sicherheit.py`](refactoring_sicherheit.py) für ein vollständiges Beispiel, das zeigt:
+Siehe [`refactoring_sicherheit.py`](https://github.com/Seismix/m323-trogawa/blob/main/D/DE1/refactoring_sicherheit.py) für ein vollständiges Beispiel, das zeigt:
 - Wie man **3 gezielte Unit-Tests** definiert, die das Verhalten vor und nach dem Refactoring absichern
 - Wie man **3 potenzielle Nebeneffekte** identifiziert und jeweils eine konkrete **Gegenmassnahme** vorschlägt
 - Wie man eine sichere Refactoring-Strategie schrittweise umsetzt

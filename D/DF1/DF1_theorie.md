@@ -18,7 +18,7 @@ In dieser Kompetenz geht es darum, Refactoring nicht nur zu kennen, sondern **ak
 
 ## Codebeispiel
 
-Siehe [`refactoring_beispiel.py`](refactoring_beispiel.py) für ein vollständiges, kommentiertes Beispiel, das alle drei Techniken demonstriert.
+Siehe [`refactoring_beispiel.py`](https://github.com/Seismix/m323-trogawa/blob/main/D/DF1/refactoring_beispiel.py) für ein vollständiges, kommentiertes Beispiel, das alle drei Techniken demonstriert.
 
 ### Zusammenfassung der Techniken
 
