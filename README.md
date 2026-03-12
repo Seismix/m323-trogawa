@@ -1,4 +1,4 @@
-# M323 — Funktional Programmieren
+# M323: Funktional Programmieren
 
 > **Live:** [seismix.github.io/m323-trogawa](https://seismix.github.io/m323-trogawa/)
 

@@ -1,10 +1,10 @@
 ---
 title: "DF1"
-parent: "D — Refactoring & Optimierung"
+parent: "D - Refactoring & Optimierung"
 nav_order: 2
 ---
 
-# DF1 — Refactoring-Techniken anwenden
+# DF1: Refactoring-Techniken anwenden
 
 > *Ich kann mit Refactoring-Techniken einen Code lesbarer und verständlicher machen.*
 
@@ -12,9 +12,9 @@ nav_order: 2
 
 In dieser Kompetenz geht es darum, Refactoring nicht nur zu kennen, sondern **aktiv anzuwenden**. Die drei Kernfähigkeiten sind:
 
-1. **Extract Function** — Lange Codeblöcke in benannte Funktionen auslagern
-2. **Rename** — Variablen und Funktionen aussagekräftig benennen
-3. **Duplikate entfernen** — Gemeinsamen Code in wiederverwendbare Funktionen extrahieren
+1. **Extract Function:** Lange Codeblöcke in benannte Funktionen auslagern
+2. **Rename:** Variablen und Funktionen aussagekräftig benennen
+3. **Duplikate entfernen:** Gemeinsamen Code in wiederverwendbare Funktionen extrahieren
 
 | Technik | Vorher | Nachher |
 |---------|--------|---------|
@@ -26,13 +26,13 @@ In dieser Kompetenz geht es darum, Refactoring nicht nur zu kennen, sondern **ak
 
 ## Beispiel: Bestellverarbeitung
 
-### Vorher — unrefactored
+### Vorher (unrefactored)
 
 Dieser Code funktioniert, ist aber schwer zu lesen und zu warten:
 
 ```python
 def proc(o):
-    """Verarbeitet eine Bestellung — schlecht benannt, zu lang, dupliziert."""
+    """Verarbeitet eine Bestellung - schlecht benannt, zu lang, dupliziert."""
     # Validierung (dupliziert für jeden Bestelltyp)
     if not o.get("customer"):
         print("Fehler: Kein Kunde")
@@ -68,7 +68,7 @@ def proc(o):
 
 ---
 
-### Nachher — refactored
+### Nachher (refactored)
 
 #### Technik 1: Extract Function
 
@@ -142,4 +142,4 @@ def process_order(order: dict) -> float | None:
     return total
 ```
 
-Jeder Schritt ist in eine eigene Funktion extrahiert — die Hauptfunktion liest sich jetzt wie eine Zusammenfassung.
+Jeder Schritt ist in eine eigene Funktion extrahiert, die Hauptfunktion liest sich jetzt wie eine Zusammenfassung.

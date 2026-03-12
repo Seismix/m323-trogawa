@@ -1,10 +1,10 @@
 ---
 title: "DG1"
-parent: "D — Refactoring & Optimierung"
+parent: "D - Refactoring & Optimierung"
 nav_order: 1
 ---
 
-# DG1 — Refactoring-Techniken aufzählen
+# DG1: Refactoring-Techniken aufzählen
 
 > *Ich kann einige Refactoring-Techniken aufzählen, die einen Code lesbarer und verständlicher machen.*
 
@@ -149,7 +149,7 @@ if is_large_order and is_loyal_customer:
 
 ---
 
-## Code Smells — Wann braucht es Refactoring?
+## Code Smells: Wann braucht es Refactoring?
 
 | Code Smell | Beschreibung | Passende Technik |
 |------------|-------------|-----------------|

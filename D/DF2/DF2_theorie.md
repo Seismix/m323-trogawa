@@ -1,10 +1,10 @@
 ---
 title: "DF2"
-parent: "D — Refactoring & Optimierung"
+parent: "D - Refactoring & Optimierung"
 nav_order: 5
 ---
 
-# DF2 — Massnahmen zur Leistungsverbesserung umsetzen
+# DF2: Massnahmen zur Leistungsverbesserung umsetzen
 
 > *Ich kann vorgegebene Massnahmen zur Verbesserung der Leistung von Code umsetzen.*
 
@@ -12,9 +12,9 @@ nav_order: 5
 
 Hier geht es darum, Performance-Optimierungen **praktisch umzusetzen**:
 
-1. **Caching / Memoization** — Teure Berechnungen zwischenspeichern
-2. **Unnötige Berechnungen eliminieren** — Redundante Arbeit erkennen und entfernen
-3. **Lazy Evaluation** — Werte erst bei Bedarf berechnen
+1. **Caching / Memoization:** Teure Berechnungen zwischenspeichern
+2. **Unnötige Berechnungen eliminieren:** Redundante Arbeit erkennen und entfernen
+3. **Lazy Evaluation:** Werte erst bei Bedarf berechnen
 
 ---
 
@@ -25,13 +25,13 @@ Fibonacci ohne Cache hat exponentielle Laufzeit O(2^n), weil dieselben Teilprobl
 ```python
 from functools import lru_cache
 
-# OHNE Caching — O(2^n), extrem langsam ab n > 30
+# OHNE Caching - O(2^n), extrem langsam ab n > 30
 def fibonacci_slow(n: int) -> int:
     if n < 2:
         return n
     return fibonacci_slow(n - 1) + fibonacci_slow(n - 2)
 
-# MIT Caching — O(n)
+# MIT Caching - O(n)
 # @lru_cache speichert die Ergebnisse automatisch.
 # Jeder Wert wird nur einmal berechnet und dann aus dem Cache gelesen.
 @lru_cache(maxsize=None)
@@ -41,7 +41,7 @@ def fibonacci_fast(n: int) -> int:
     return fibonacci_fast(n - 1) + fibonacci_fast(n - 2)
 ```
 
-**Ergebnis:** `fibonacci(35)` — ohne Cache ~1s, mit Cache ~0.00002s. **~50'000x schneller.**
+**Ergebnis:** `fibonacci(35)`, ohne Cache ~1s, mit Cache ~0.00002s. **~50'000x schneller.**
 
 ---
 
@@ -50,7 +50,7 @@ def fibonacci_fast(n: int) -> int:
 In einer Schleife werden Werte wiederholt berechnet, die sich gar nicht ändern:
 
 ```python
-# LANGSAM: Durchschnittspreis wird in jeder Iteration neu berechnet — O(n²)
+# LANGSAM: Durchschnittspreis wird in jeder Iteration neu berechnet - O(n²)
 def find_expensive_items_slow(products: list[dict], budget: float) -> list[str]:
     result = []
     for product in products:
@@ -60,7 +60,7 @@ def find_expensive_items_slow(products: list[dict], budget: float) -> list[str]:
             result.append(product["name"])
     return result
 
-# SCHNELL: Einmal berechnen, ausserhalb der Schleife — O(n)
+# SCHNELL: Einmal berechnen, ausserhalb der Schleife - O(n)
 def find_expensive_items_fast(products: list[dict], budget: float) -> list[str]:
     avg_price = sum(p["price"] for p in products) / len(products)
     return [
@@ -99,7 +99,7 @@ def first_n_primes_eager(n: int) -> list[int]:
     return primes
 
 # LAZY: Gibt Primzahlen eine nach der anderen zurück
-# Braucht nur Speicher für die aktuelle Zahl — O(1) Speicher.
+# Braucht nur Speicher für die aktuelle Zahl - O(1) Speicher.
 def prime_generator():
     def is_prime(num):
         if num < 2:
@@ -116,4 +116,4 @@ def prime_generator():
         candidate += 1
 ```
 
-**Ergebnis:** Für 1'000 Primzahlen — Liste: ~8'800 Bytes, Generator: ~200 Bytes. Gleiche Ergebnisse, **44x weniger Speicher.**
+**Ergebnis:** Für 1'000 Primzahlen, Liste: ~8'800 Bytes, Generator: ~200 Bytes. Gleiche Ergebnisse, **44x weniger Speicher.**

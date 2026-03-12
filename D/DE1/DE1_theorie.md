@@ -1,26 +1,26 @@
 ---
 title: "DE1"
-parent: "D — Refactoring & Optimierung"
+parent: "D - Refactoring & Optimierung"
 nav_order: 3
 ---
 
-# DE1 — Auswirkungen des Refactorings einschätzen
+# DE1: Auswirkungen des Refactorings einschätzen
 
 > *Ich kann die Auswirkungen des Refactorings auf das Verhalten des Codes einschätzen und sicherstellen, dass das Refactoring keine unerwünschten Nebeneffekte hat.*
 
 ## Überblick
 
-Refactoring soll das **Verhalten** des Codes nicht verändern — nur seine **Struktur**. Doch wie stellt man das sicher?
+Refactoring soll das **Verhalten** des Codes nicht verändern, nur seine **Struktur**. Doch wie stellt man das sicher?
 
-1. **Verhaltenserhaltung prüfen** — Für ein gegebenes Refactoring mindestens 3 Unit-Tests definieren, die sicherstellen, dass das Verhalten einer Funktion unverändert bleibt.
-2. **Nebeneffekte identifizieren** — Für ein gegebenes Refactoring mindestens 3 potenzielle Nebeneffekte identifizieren und für jede eine Gegenmassnahme vorschlagen.
-3. **Refactoring-Strategie wählen** — Schrittweise, testbar, sicher vorgehen.
+1. **Verhaltenserhaltung prüfen:** Für ein gegebenes Refactoring mindestens 3 Unit-Tests definieren, die sicherstellen, dass das Verhalten einer Funktion unverändert bleibt.
+2. **Nebeneffekte identifizieren:** Für ein gegebenes Refactoring mindestens 3 potenzielle Nebeneffekte identifizieren und für jede eine Gegenmassnahme vorschlagen.
+3. **Refactoring-Strategie wählen:** Schrittweise, testbar, sicher vorgehen.
 
 ---
 
 ## Ausgangslage: Versandkosten-Funktion
 
-Diese Funktion funktioniert, ist aber schwer wartbar. Wir wollen sie refactoren — OHNE das Verhalten zu ändern.
+Diese Funktion funktioniert, ist aber schwer wartbar. Wir wollen sie refactoren, OHNE das Verhalten zu ändern.
 
 ```python
 def calc_shipping_v1(weight: float, destination: str, express: bool) -> float:
@@ -57,7 +57,7 @@ import unittest
 class TestShippingBehavior(unittest.TestCase):
 
     # Test 1: Grenzwerte der Gewichtsstufen
-    # Genau auf der Grenze und knapp darüber — hier passieren die meisten Fehler.
+    # Genau auf der Grenze und knapp darüber - hier passieren die meisten Fehler.
     def test_weight_tier_boundaries(self):
         for calc_fn in [calc_shipping_v1, calc_shipping_v2]:
             self.assertEqual(calc_fn(1.0, "CH", False), 7.0)    # Genau auf 1kg
@@ -133,4 +133,4 @@ def calc_shipping_v2(weight: float, destination: str, express: bool) -> float:
     return round(cost, 2)
 ```
 
-Die Unit-Tests oben laufen für **beide** Versionen — so ist sichergestellt, dass das Verhalten identisch bleibt.
+Die Unit-Tests oben laufen für **beide** Versionen, so ist sichergestellt, dass das Verhalten identisch bleibt.

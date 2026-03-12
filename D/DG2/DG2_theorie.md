@@ -1,10 +1,10 @@
 ---
 title: "DG2"
-parent: "D — Refactoring & Optimierung"
+parent: "D - Refactoring & Optimierung"
 nav_order: 4
 ---
 
-# DG2 — Massnahmen zur Leistungsverbesserung aufzählen
+# DG2: Massnahmen zur Leistungsverbesserung aufzählen
 
 > *Ich kann mindestens 3 allgemeine Techniken zur Leistungsverbesserung von Code benennen und deren Einsatzgebiet erklären.*
 
@@ -24,7 +24,7 @@ nav_order: 4
 
 Ergebnisse teurer Berechnungen werden zwischengespeichert, sodass sie bei wiederholtem Aufruf nicht neu berechnet werden müssen.
 
-**Einsatzgebiet:** Funktionen, die häufig mit denselben Argumenten aufgerufen werden — typisch bei rekursiven Algorithmen, Datenbankabfragen oder API-Calls.
+**Einsatzgebiet:** Funktionen, die häufig mit denselben Argumenten aufgerufen werden, typisch bei rekursiven Algorithmen, Datenbankabfragen oder API-Calls.
 
 ```python
 from functools import lru_cache
@@ -35,15 +35,15 @@ def fibonacci(n):
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-# Ohne Cache: O(2^n) — extrem langsam
-# Mit Cache:  O(n) — jedes Teilergebnis wird nur einmal berechnet
+# Ohne Cache: O(2^n) - extrem langsam
+# Mit Cache:  O(n) - jedes Teilergebnis wird nur einmal berechnet
 ```
 
 ### 2. Lazy Evaluation
 
 Werte werden erst berechnet, wenn sie tatsächlich gebraucht werden. Spart Speicher und vermeidet unnötige Arbeit.
 
-**Einsatzgebiet:** Verarbeitung grosser Datenmengen, bei denen man nicht alles gleichzeitig im Speicher braucht — z.B. Datei-Streaming, Paginierung, oder wenn nur die ersten N Ergebnisse benötigt werden.
+**Einsatzgebiet:** Verarbeitung grosser Datenmengen, bei denen man nicht alles gleichzeitig im Speicher braucht, z.B. Datei-Streaming, Paginierung, oder wenn nur die ersten N Ergebnisse benötigt werden.
 
 ```python
 # Eager: Erstellt die gesamte Liste im Speicher
@@ -57,7 +57,7 @@ squares_gen = (x ** 2 for x in range(1_000_000))
 
 Berechnungen, die wiederholt identisch ausgeführt werden, sollten nur einmal gemacht werden.
 
-**Einsatzgebiet:** Schleifen und häufig durchlaufene Codepfade, in denen derselbe Ausdruck mehrfach ausgewertet wird — z.B. `len()` in jeder Iteration, wiederholte String-Formatierung, oder mehrfache Attribut-Lookups.
+**Einsatzgebiet:** Schleifen und häufig durchlaufene Codepfade, in denen derselbe Ausdruck mehrfach ausgewertet wird, z.B. `len()` in jeder Iteration, wiederholte String-Formatierung, oder mehrfache Attribut-Lookups.
 
 ```python
 # Schlecht: len() wird in jeder Iteration aufgerufen
@@ -95,14 +95,14 @@ if username in allowed_users:  # Konstante Zeit
 Ein besserer Algorithmus kann den Unterschied zwischen Sekunden und Stunden ausmachen.
 
 ```python
-# O(n²) — Bubble Sort
+# O(n²) - Bubble Sort
 def bubble_sort(arr):
     for i in range(len(arr)):
         for j in range(len(arr) - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
-# O(n log n) — Built-in Sort (Timsort)
+# O(n log n) - Built-in Sort (Timsort)
 arr.sort()
 ```
 
@@ -118,7 +118,7 @@ arr.sort()
 
 ---
 
-## Big-O Notation — Grundlagen
+## Big-O Notation: Grundlagen
 
 Die Big-O-Notation beschreibt, wie die Laufzeit eines Algorithmus mit der Eingabegrösse wächst.
 
