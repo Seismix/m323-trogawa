@@ -18,7 +18,9 @@ Refactoring ist die Umstrukturierung von bestehendem Code, **ohne dessen Verhalt
 
 ### 1. Extract Function
 
-Ein langer Codeblock wird in eine benannte Funktion ausgelagert.
+**Problem:** Eine Funktion ist zu lang und macht mehrere Dinge gleichzeitig. Man muss den gesamten Code lesen, um zu verstehen, was passiert.
+
+**Wie es die Lesbarkeit verbessert:** Jeder Codeblock bekommt einen sprechenden Funktionsnamen. Die Hauptfunktion liest sich danach wie eine Zusammenfassung.
 
 ```python
 # Vorher
@@ -49,7 +51,9 @@ def process_order(order):
 
 ### 2. Rename Variable / Rename Function
 
-Unklare Namen werden durch aussagekräftige ersetzt.
+**Problem:** Variablen und Funktionen haben nichtssagende Namen wie `x`, `tmp`, `calc`. Man muss den umliegenden Code lesen, um zu verstehen, was sie bedeuten.
+
+**Wie es die Lesbarkeit verbessert:** Der Name allein verrät den Zweck. Code wird selbstdokumentierend.
 
 ```python
 # Vorher
@@ -63,7 +67,9 @@ def calculate_net_price(unit_price, quantity, discount):
 
 ### 3. Inline Function
 
-Eine Funktion, die nur einmal aufgerufen wird und trivial ist, wird direkt eingesetzt.
+**Problem:** Eine triviale Funktion, die nur einmal aufgerufen wird, erzeugt unnötige Indirektion. Man muss zur Funktionsdefinition springen, nur um eine Zeile zu lesen.
+
+**Wie es die Lesbarkeit verbessert:** Der Code ist direkt sichtbar, ohne Sprünge. Weniger Abstraktionsebenen.
 
 ```python
 # Vorher
@@ -80,7 +86,9 @@ def can_vote(person):
 
 ### 4. Remove Dead Code
 
-Nicht erreichbarer oder nicht verwendeter Code wird entfernt.
+**Problem:** Auskommentierter oder unerreichbarer Code lenkt ab und suggeriert, dass er noch relevant ist. Entwickler trauen sich nicht, ihn zu löschen, weil unklar ist, ob er gebraucht wird.
+
+**Wie es die Lesbarkeit verbessert:** Weniger Code bedeutet weniger zu lesen. Alles, was im File steht, ist auch tatsächlich relevant.
 
 ```python
 # Vorher
@@ -96,7 +104,9 @@ def get_status(code):
 
 ### 5. Simplify Conditional
 
-Komplexe Bedingungen werden vereinfacht oder in Funktionen ausgelagert.
+**Problem:** Verschachtelte oder lange `if`-Bedingungen sind schwer zu lesen. Man muss mehrere Teilbedingungen im Kopf behalten, um den Gesamtausdruck zu verstehen.
+
+**Wie es die Lesbarkeit verbessert:** Die Bedingung bekommt einen sprechenden Namen (`is_eligible`). Die Geschäftslogik wird auf einen Blick klar.
 
 ```python
 # Vorher
@@ -116,7 +126,9 @@ if is_eligible(user):
 
 ### 6. Replace Magic Number with Named Constant
 
-Unbenannte Zahlenwerte werden durch Konstanten ersetzt.
+**Problem:** Zahlen wie `120` oder `0.85` im Code haben keine erkennbare Bedeutung. Man muss raten oder den Kontext studieren, um zu verstehen, wofür sie stehen.
+
+**Wie es die Lesbarkeit verbessert:** `MAX_SPEED_LIMIT` ist sofort verständlich. Ausserdem muss der Wert nur an einer Stelle geändert werden.
 
 ```python
 # Vorher
@@ -132,7 +144,9 @@ if speed > MAX_SPEED_LIMIT:
 
 ### 7. Introduce Explaining Variable
 
-Ein komplexer Ausdruck wird in eine Variable mit erklärendem Namen gespeichert.
+**Problem:** Ein komplexer Ausdruck in einer `if`-Bedingung oder Berechnung ist schwer zu parsen. Man muss ihn mental zerlegen, um zu verstehen, was geprüft wird.
+
+**Wie es die Lesbarkeit verbessert:** Jeder Teilausdruck bekommt einen Namen, der seine Bedeutung erklärt. Die Bedingung liest sich danach wie natürliche Sprache.
 
 ```python
 # Vorher
