@@ -1,0 +1,17 @@
+title: M323 — Funktionale Programmierung
+description: Kompetenzband-Dokumentation für das Modul 323
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+
+permalink: pretty
+
+exclude:
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
