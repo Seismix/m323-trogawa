@@ -8,6 +8,16 @@ nav_order: 3
 
 > *Ich kann die Auswirkungen des Refactorings auf das Verhalten des Codes einschätzen und sicherstellen, dass das Refactoring keine unerwünschten Nebeneffekte hat.*
 
+## Lernziele
+
+| # | Lernziel | Beantwortet in |
+|---|----------|----------------|
+| 1 | Ich kann für ein gegebenes Refactoring mindestens 3 Unit-Tests definieren, die sicherstellen, dass das Verhalten einer Funktion unverändert bleibt. | [3 Unit-Tests zur Verhaltensabsicherung](#3-unit-tests-zur-verhaltensabsicherung) |
+| 2 | Ich kann für ein gegebenes Refactoring mindestens 3 potenzielle Nebeneffekte identifizieren und für jede eine Gegenmassnahme vorschlagen. | [3 potenzielle Nebeneffekte + Gegenmassnahmen](#3-potenzielle-nebeneffekte--gegenmassnahmen) |
+| 3 | Ich kann für eine gegebene Codebasis eine sichere Refactoring-Strategie vorschlagen, die schrittweise vorgeht und testbar bleibt. | [Refactoring-Strategie wählen](#refactoring-strategie-wählen) |
+
+---
+
 ## Überblick
 
 Refactoring soll das **Verhalten** des Codes nicht verändern, nur seine **Struktur**. Doch wie stellt man das sicher?

@@ -8,6 +8,16 @@ nav_order: 1
 
 > *Ich kann einige Refactoring-Techniken aufzählen, die einen Code lesbarer und verständlicher machen.*
 
+## Lernziele
+
+| # | Lernziel | Beantwortet in |
+|---|----------|----------------|
+| 1 | Ich kann mindestens 3 Refactoring-Techniken benennen. | [Gängige Refactoring-Techniken](#gängige-refactoring-techniken) (7 Techniken) |
+| 2 | Ich kann für jede Technik erklären, welches Problem sie löst und wie sie die Lesbarkeit verbessert. | **Problem** und **Wie es die Lesbarkeit verbessert** bei jeder Technik |
+| 3 | Ich kann in gegebenem Code typische Code Smells identifizieren, die auf Refactoring-Bedarf hinweisen. | [Code Smells](#code-smells-wann-braucht-es-refactoring) |
+
+---
+
 ## Was ist Refactoring?
 
 Refactoring ist die Umstrukturierung von bestehendem Code, **ohne dessen Verhalten zu ändern**. Das Ziel ist es, den Code lesbarer, wartbarer und verständlicher zu machen.

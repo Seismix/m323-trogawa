@@ -8,6 +8,16 @@ nav_order: 4
 
 > *Ich kann mindestens 3 allgemeine Techniken zur Leistungsverbesserung von Code benennen und deren Einsatzgebiet erklären.*
 
+## Lernziele
+
+| # | Lernziel | Beantwortet in |
+|---|----------|----------------|
+| 1 | Ich kann mindestens 3 allgemeine Techniken zur Leistungsverbesserung von Code benennen und deren Einsatzgebiet erklären. | [3 Kerntechniken und ihre Einsatzgebiete](#übersicht-3-kerntechniken-und-ihre-einsatzgebiete) |
+| 2 | Ich kann verschiedene Arten von Performance-Bottlenecks benennen (z.B. CPU, Speicher, I/O). | [Performance-Bottleneck-Typen](#performance-bottleneck-typen) |
+| 3 | Ich kann die Zeitkomplexität einfacher Algorithmen einordnen und erklären, warum O(n) besser ist als O(n²). | [Big-O Notation: Grundlagen](#big-o-notation-grundlagen) |
+
+---
+
 ## Allgemeine Optimierungstechniken
 
 ### Übersicht: 3 Kerntechniken und ihre Einsatzgebiete

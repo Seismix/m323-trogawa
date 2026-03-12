@@ -8,6 +8,16 @@ nav_order: 5
 
 > *Ich kann vorgegebene Massnahmen zur Verbesserung der Leistung von Code umsetzen.*
 
+## Lernziele
+
+| # | Lernziel | Beantwortet in |
+|---|----------|----------------|
+| 1 | Ich kann eine vorgegebene Caching-Strategie (z.B. Memoization) in bestehendem Code umsetzen. | [1. Memoization / Caching](#1-memoization--caching) |
+| 2 | Ich kann in gegebenem Code unnötige oder redundante Berechnungen identifizieren und entfernen. | [2. Unnötige Berechnungen eliminieren](#2-unnötige-berechnungen-eliminieren) |
+| 3 | Ich kann Lazy Evaluation (z.B. Generatoren) einsetzen, um die Speichereffizienz zu verbessern. | [3. Lazy Evaluation mit Generatoren](#3-lazy-evaluation-mit-generatoren) |
+
+---
+
 ## Überblick
 
 Hier geht es darum, Performance-Optimierungen **praktisch umzusetzen**:

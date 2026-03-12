@@ -8,6 +8,16 @@ nav_order: 6
 
 > *Ich kann effiziente Algorithmen, Techniken oder Datenstrukturen auswählen und einsetzen, um die Leistung von Code zu verbessern.*
 
+## Lernziele
+
+| # | Lernziel | Beantwortet in |
+|---|----------|----------------|
+| 1 | Ich kann für ein gegebenes Problem die effizienteste Datenstruktur auswählen und die Wahl begründen. | [1. Passende Datenstruktur wählen](#1-passende-datenstruktur-wählen) |
+| 2 | Ich kann einen ineffizienten Algorithmus durch einen effizienteren ersetzen. | [2. Algorithmus optimieren: Linear vs. Binary Search](#2-algorithmus-optimieren-linear-vs-binary-search) |
+| 3 | Ich kann die Trade-offs zwischen Speicherverbrauch und Laufzeit erklären. | [3. Trade-offs: Speicher vs. Laufzeit](#3-trade-offs-speicher-vs-laufzeit) |
+
+---
+
 ## Überblick
 
 Die fortgeschrittenste Kompetenz im Performance-Bereich:
