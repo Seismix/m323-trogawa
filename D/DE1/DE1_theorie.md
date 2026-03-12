@@ -97,6 +97,30 @@ class TestShippingBehavior(unittest.TestCase):
 
 ---
 
+## Refactoring-Strategie wählen
+
+> *Ich kann für eine gegebene Codebasis eine sichere Refactoring-Strategie vorschlagen, die schrittweise vorgeht und testbar bleibt.*
+
+Eine sichere Strategie folgt immer demselben Muster:
+
+1. **Tests schreiben** bevor man den Code anfasst. Ohne Tests weiss man nicht, ob das Verhalten noch stimmt.
+2. **Einen Schritt auf einmal.** Nie mehrere Änderungen gleichzeitig. Nach jedem Schritt Tests laufen lassen.
+3. **Riskante Stellen zuerst identifizieren.** Wo könnte sich das Verhalten ändern? (→ Nebeneffekte oben)
+4. **Rückwärtskompatibilität sicherstellen.** Bestehende Aufrufer dürfen nicht brechen.
+
+### Beispiel: Strategie für die Versandkosten-Funktion
+
+| Schritt | Änderung | Risiko | Test danach |
+|---------|----------|--------|-------------|
+| A | Tarife in Datenstruktur extrahieren | Werte könnten falsch übertragen werden | Alle 3 Tests laufen lassen |
+| B | `get_zone()` mit Fallback einführen | Unbekannte Destinationen | Test 3 (unknown destination) |
+| C | `calculate_weight_cost()` extrahieren | Reihenfolge der Tiers | Test 1 (Grenzwerte) |
+| D | Alles zusammensetzen, `round()` beibehalten | Rundungsdifferenzen | Alle 3 Tests laufen lassen |
+
+Jeder Schritt ist einzeln testbar. Wenn ein Test nach Schritt C fehlschlägt, weiss man genau, dass die Gewichtsberechnung das Problem ist.
+
+---
+
 ## Refactored Version
 
 ```python
