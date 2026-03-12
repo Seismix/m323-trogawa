@@ -72,7 +72,7 @@ def proc(o):
 
 #### Technik 1: Extract Function
 
-Jede logische Einheit wird in eine eigene Funktion extrahiert:
+Der Validierungsblock war Teil der 30-Zeilen-Funktion `proc`. Jetzt ist er eine eigene Funktion mit klarem Namen. Wer `process_order` liest, sieht sofort: zuerst wird validiert, ohne den Validierungscode selbst lesen zu müssen.
 
 ```python
 def validate_order(order: dict) -> bool:
@@ -88,7 +88,12 @@ def validate_order(order: dict) -> bool:
 
 #### Technik 2: Rename Variable / Function
 
-Statt `t`, `p`, `q`, `i` verwenden wir sprechende Namen. Statt `proc` heisst die Funktion `process_order`. Magic Numbers werden zu Konstanten:
+Im Original hiessen die Variablen `t`, `p`, `q`, `i` und die Funktion `proc`. Ohne den umliegenden Code zu lesen, ist unklar, was sie bedeuten. Nach dem Umbenennen verrät jeder Name seinen Zweck:
+
+- `t` → `subtotal`, `discounted`, `total` (drei verschiedene Werte, die vorher alle `t` hiessen)
+- `p` → `item["price"]` (direkt über das Dictionary)
+- `proc` → `process_order`
+- `0.85` → `VIP_DISCOUNT`, `1.081` → `VAT_RATE`
 
 ```python
 VAT_RATE = 1.081         # MwSt-Satz Schweiz (8.1%)
@@ -109,7 +114,7 @@ def calculate_total(subtotal: float) -> float:
 
 #### Technik 3: Duplikate entfernen
 
-Die Artikelausgabe war vorher dupliziert. Jetzt gibt es eine einzige Funktion dafür:
+Im Original wurde `item["price"] * item["qty"]` zweimal berechnet: einmal für die Summe, einmal für die Ausgabe. Die Formatierung eines Artikels als Rechnungszeile war ebenfalls dupliziert. Jetzt gibt es dafür eine einzige Funktion:
 
 ```python
 def format_line_item(item: dict) -> str:
