@@ -45,7 +45,7 @@ def check_membership_set(allowed: set, usernames: list) -> list[bool]:
     return [user in allowed for user in usernames]
 ```
 
-**Ergebnis:** Bei 50'000 erlaubten Benutzern und 1'000 Prüfungen, Set ist **~90x schneller.**
+**Ergebnis:** Liste prüft O(n) pro Lookup, Set prüft O(1). Bei grossen Datenmengen ist der Unterschied massiv.
 
 ---
 
@@ -79,7 +79,7 @@ def binary_search(sorted_data: list, target: int) -> int | None:
     return None
 ```
 
-**Ergebnis:** Bei 1'000'000 Elementen, Binary Search ist **~1'800x schneller.**
+**Ergebnis:** Linear Search ist O(n), Binary Search ist O(log n). Bei 1'000'000 Elementen braucht die binäre Suche maximal ~20 Vergleiche statt bis zu 1'000'000.
 
 ---
 
@@ -110,7 +110,7 @@ def find_duplicates_with_set(data: list) -> list:
     return list(duplicates)
 ```
 
-**Ergebnis:** Bei 5'000 Elementen, Set-Methode ist **~600x schneller**, braucht dafür ~500 KB extra Speicher.
+**Ergebnis:** Die naive Methode ist O(n²), die Set-Methode O(n), braucht dafür O(n) zusätzlichen Speicher für das Set.
 
 | Methode | Zeit | Speicher | Wann verwenden? |
 |---------|------|----------|----------------|

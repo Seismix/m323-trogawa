@@ -51,7 +51,7 @@ def fibonacci_fast(n: int) -> int:
     return fibonacci_fast(n - 1) + fibonacci_fast(n - 2)
 ```
 
-**Ergebnis:** `fibonacci(35)`, ohne Cache ~1s, mit Cache ~0.00002s. **~50'000x schneller.**
+**Ergebnis:** Ohne Cache ist die Laufzeit exponentiell O(2^n), mit Cache linear O(n). Der Unterschied wird ab n > 30 deutlich spürbar.
 
 ---
 
@@ -80,7 +80,7 @@ def find_expensive_items_fast(products: list[dict], budget: float) -> list[str]:
     ]
 ```
 
-**Ergebnis:** Bei 10'000 Produkten ~**5'000x schneller.**
+**Ergebnis:** Die langsame Version ist O(n²), die schnelle O(n). Je grösser die Produktliste, desto dramatischer der Unterschied.
 
 ---
 
@@ -126,4 +126,4 @@ def prime_generator():
         candidate += 1
 ```
 
-**Ergebnis:** Für 1'000 Primzahlen, Liste: ~8'800 Bytes, Generator: ~200 Bytes. Gleiche Ergebnisse, **44x weniger Speicher.**
+**Ergebnis:** Die Liste speichert alle Ergebnisse im Speicher (wächst mit n), der Generator braucht nur konstant viel Speicher (O(1)), unabhängig davon wie viele Primzahlen berechnet werden.
