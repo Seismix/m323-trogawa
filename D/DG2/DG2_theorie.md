@@ -13,7 +13,7 @@ nav_order: 4
 | # | Lernziel | Beantwortet in |
 |---|----------|----------------|
 | 1 | Ich kann mindestens 3 allgemeine Techniken zur Leistungsverbesserung von Code benennen und deren Einsatzgebiet erklären. | [3 Kerntechniken und ihre Einsatzgebiete](#übersicht-3-kerntechniken-und-ihre-einsatzgebiete) |
-| 2 | Ich kann verschiedene Arten von Performance-Bottlenecks benennen (z.B. CPU, Speicher, I/O). | [Performance-Bottleneck-Typen](#performance-bottleneck-typen) |
+| 2 | Ich kann mindestens 3 verschiedene Arten von Performance-Bottlenecks benennen und je ein Beispiel nennen. | [Performance-Bottleneck-Typen](#performance-bottleneck-typen) |
 | 3 | Ich kann die Zeitkomplexität einfacher Algorithmen einordnen und erklären, warum O(n) besser ist als O(n²). | [Big-O Notation: Grundlagen](#big-o-notation-grundlagen) |
 
 ---
@@ -125,6 +125,8 @@ arr.sort()
 | **CPU-bound** | Prozessor ist der Engpass (viel Rechenarbeit) | Verschlüsselung, Bildverarbeitung, Sortierung grosser Datenmengen |
 | **Memory-bound** | Speicher ist der Engpass (zu viel RAM-Verbrauch) | Laden einer riesigen Datei komplett in den Speicher |
 | **I/O-bound** | Ein-/Ausgabe ist der Engpass (Warten auf Daten) | Datenbankabfragen, Netzwerk-Requests, Dateizugriffe |
+| **Algorithmic** | Der gewählte Algorithmus ist zu langsam für die Datenmenge | O(n²) Suche statt O(log n) mit binärer Suche |
+| **Concurrency-bound** | Threads blockieren sich gegenseitig (Locks, Synchronisation) | Mehrere Threads warten auf dieselbe Datenbank-Verbindung |
 
 ---
 
