@@ -14,7 +14,7 @@ nav_order: 6
 |---|----------|----------------|
 | 1 | Ich kann für ein gegebenes Problem die effizienteste Datenstruktur auswählen und die Wahl begründen. | [1. Passende Datenstruktur wählen](#1-passende-datenstruktur-wählen) |
 | 2 | Ich kann einen ineffizienten Algorithmus durch einen effizienteren ersetzen. | [2. Algorithmus optimieren: Linear vs. Binary Search](#2-algorithmus-optimieren-linear-vs-binary-search) |
-| 3 | Ich kann die Trade-offs zwischen Speicherverbrauch und Laufzeit erklären. | [3. Trade-offs: Speicher vs. Laufzeit](#3-trade-offs-speicher-vs-laufzeit) |
+| 3 | Ich kann anhand eines Beispiels mindestens 2 Trade-offs zwischen Speicherverbrauch und Laufzeit erklären. | [3. Trade-offs: Speicher vs. Laufzeit](#3-trade-offs-speicher-vs-laufzeit) |
 
 ---
 
@@ -116,3 +116,65 @@ def find_duplicates_with_set(data: list) -> list:
 |---------|------|----------|----------------|
 | Naive (O(n²)) | Langsam | Minimal | Nur bei sehr kleinen Datenmengen |
 | Set (O(n)) | Schnell | Mehr | Fast immer, der Speicher-Overhead ist minimal |
+
+### Trade-off 2: Memoization (Caching vs. Speicher)
+
+```python
+# Ohne Cache: berechnet fibonacci(n) jedes Mal neu - O(2^n) Zeit, O(n) Speicher (Rekursionsstack)
+def fibonacci(n: int) -> int:
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Mit Cache: speichert bereits berechnete Werte - O(n) Zeit, O(n) Speicher (Cache + Stack)
+from functools import lru_cache
+
+@lru_cache
+def fibonacci_cached(n: int) -> int:
+    if n <= 1:
+        return n
+    return fibonacci_cached(n - 1) + fibonacci_cached(n - 2)
+```
+
+**Ergebnis:** Der Cache reduziert die Laufzeit von O(2^n) auf O(n), braucht dafür aber O(n) zusätzlichen Speicher für die gespeicherten Ergebnisse.
+
+### Trade-off 3: Vorberechnung (Precomputation)
+
+```python
+# Ohne Vorberechnung: berechnet die Summe jedes Mal neu - O(n) pro Abfrage
+def range_sum(data: list[int], start: int, end: int) -> int:
+    return sum(data[start:end + 1])
+
+# Mit Prefix-Sum-Array: O(n) Vorberechnung, danach O(1) pro Abfrage
+def build_prefix_sums(data: list[int]) -> list[int]:
+    prefix = [0]
+    for x in data:
+        prefix.append(prefix[-1] + x)
+    return prefix
+
+def range_sum_fast(prefix: list[int], start: int, end: int) -> int:
+    return prefix[end + 1] - prefix[start]
+```
+
+**Ergebnis:** Das Prefix-Sum-Array braucht O(n) zusätzlichen Speicher, macht aber jede Bereichssumme in O(1) statt O(n). Lohnt sich, wenn viele Abfragen auf dieselben Daten gemacht werden.
+
+### Trade-off 4: Lazy vs. Eager Evaluation
+
+```python
+# Eager: erzeugt die gesamte Liste im Speicher - O(n) Speicher
+squares_list = [x ** 2 for x in range(1_000_000)]
+
+# Lazy: erzeugt Werte erst bei Bedarf - O(1) Speicher
+squares_gen = (x ** 2 for x in range(1_000_000))
+```
+
+**Ergebnis:** Die Eager-Variante ist schneller beim wiederholten Zugriff (Daten liegen bereit), die Lazy-Variante spart Speicher, muss aber bei jedem Durchlauf neu berechnen. Lazy lohnt sich bei grossen Datenmengen oder wenn nur ein Teil der Daten gebraucht wird.
+
+### Zusammenfassung: 4 Trade-off-Muster
+
+| Trade-off | Mehr Speicher für... | Beispiel |
+|-----------|---------------------|----------|
+| **Lookup-Struktur** | Schnelleren Zugriff (O(1) statt O(n)) | Set statt Liste für Duplikatsuche |
+| **Caching** | Vermeidung redundanter Berechnungen | Memoization bei rekursiven Funktionen |
+| **Vorberechnung** | Schnellere Abfragen (O(1) statt O(n)) | Prefix-Sum-Array für Bereichssummen |
+| **Lazy Evaluation** | Weniger Speicher, dafür langsamerer Zugriff | Generator statt Liste bei grossen Datenmengen |
