@@ -13,7 +13,7 @@ nav_order: 2
 | # | Lernziel | Beantwortet in |
 |---|----------|----------------|
 | 1 | Ich kann erklären, was Immutability bedeutet, und an einem Java-Beispiel zeigen, wie immutable Werte funktionieren. | [Was ist Immutability?](#was-ist-immutability) |
-| 2 | Ich kann erklären, warum referenzierte Objekte in OO-Sprachen problematisch sein können und wie Immutability dieses Problem löst. | [Das Aliasing-Problem](#das-aliasing-problem) |
+| 2 | Ich kann anhand eines Codebeispiels erklären, warum referenzierte Objekte in OO-Sprachen problematisch sein können und wie Immutability dieses Problem löst. | [Das Aliasing-Problem](#das-aliasing-problem) |
 | 3 | Ich kann in gegebenem Code erkennen, ob eine Mutation vorliegt, und die funktionale Alternative zeigen. | [Das Aliasing-Problem](#das-aliasing-problem) |
 
 ---

@@ -13,7 +13,7 @@ nav_order: 2
 | # | Lernziel | Beantwortet in |
 |---|----------|----------------|
 | 1 | Ich kann eine imperative Anforderung in eine deklarative Anforderung umformulieren, die den Endzustand beschreibt. | [Anforderungen deklarativ formulieren](#anforderungen-deklarativ-formulieren) |
-| 2 | Ich kann erklären, warum es vorteilhaft ist, den Endzustand zu beschreiben statt die Arbeitsschritte. | [Warum Endzustand statt Arbeitsschritte?](#warum-endzustand-statt-arbeitsschritte) |
+| 2 | Ich kann mindestens 3 Vorteile nennen, warum es vorteilhaft ist, den Endzustand zu beschreiben statt die Arbeitsschritte. | [Warum Endzustand statt Arbeitsschritte?](#warum-endzustand-statt-arbeitsschritte) |
 | 3 | Ich kann für ein praxisnahes Szenario eine deklarative Anforderungsbeschreibung verfassen. | [Praxisbeispiele](#praxisbeispiele) |
 
 ---

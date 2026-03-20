@@ -12,9 +12,10 @@ nav_order: 1
 
 | # | Lernziel | Beantwortet in |
 |---|----------|----------------|
-| 1 | Ich kann den Unterschied zwischen imperativ ("wie") und deklarativ ("was") an einem Alltagsbeispiel erklären. | [Imperativ vs. Deklarativ](#imperativ-vs-deklarativ) |
-| 2 | Ich kann gegebene Codebeispiele korrekt als imperativ oder deklarativ einordnen und meine Zuordnung begründen. | [Imperativ oder deklarativ?](#imperativ-oder-deklarativ) |
-| 3 | Ich kann Beispiele für deklarative Sprachen und Technologien nennen und erklären, warum sie deklarativ sind. | [Deklarative Sprachen und Technologien](#deklarative-sprachen-und-technologien) |
+| 1 | Ich kann anhand eines Beispiels erklären, was imperative Programmierung bedeutet: eine Schritt-für-Schritt-Anweisung, die dem Computer sagt, *wie* etwas zu tun ist. | [Imperativ vs. Deklarativ](#imperativ-vs-deklarativ) |
+| 2 | Ich kann anhand eines Beispiels erklären, was deklarative Programmierung bedeutet: eine Beschreibung des gewünschten Endzustands (*was* erreicht werden soll). | [Imperativ vs. Deklarativ](#imperativ-vs-deklarativ) |
+| 3 | Ich kann gegebene Codebeispiele korrekt als imperativ oder deklarativ einordnen und meine Zuordnung begründen. | [Imperativ oder deklarativ?](#imperativ-oder-deklarativ) |
+| 4 | Ich kann mindestens 2 deklarative Sprachen oder Technologien nennen und erklären, warum sie deklarativ sind. | [Deklarative Sprachen und Technologien](#deklarative-sprachen-und-technologien) |
 
 ---
 
