@@ -14,7 +14,7 @@ nav_order: 3
 |---|----------|----------------|
 | 1 | Ich kann für ein gegebenes Refactoring mindestens 3 Unit-Tests definieren, die sicherstellen, dass das Verhalten einer Funktion unverändert bleibt. | [3 Unit-Tests zur Verhaltensabsicherung](#3-unit-tests-zur-verhaltensabsicherung) |
 | 2 | Ich kann für ein gegebenes Refactoring mindestens 3 potenzielle Nebeneffekte identifizieren und für jede eine Gegenmassnahme vorschlagen. | [3 potenzielle Nebeneffekte + Gegenmassnahmen](#3-potenzielle-nebeneffekte--gegenmassnahmen) |
-| 3 | Ich kann für eine gegebene Codebasis eine sichere Refactoring-Strategie vorschlagen, die schrittweise vorgeht und testbar bleibt. | [Refactoring-Strategie wählen](#refactoring-strategie-wählen) |
+| 3 | Ich kann für eine gegebene Codebasis mindestens 3 Schritte einer sicheren Refactoring-Strategie beschreiben, die testbar bleibt. | [Refactoring-Strategie wählen](#refactoring-strategie-wählen) |
 
 ---
 
