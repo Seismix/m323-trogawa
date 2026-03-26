@@ -1,5 +1,5 @@
 ---
-title: "AG1"
+title: "AG1_Python"
 parent: "A - Paradigmen"
 nav_order: 1
 ---
