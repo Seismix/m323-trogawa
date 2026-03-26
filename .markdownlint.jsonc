@@ -1,0 +1,9 @@
+{
+  // Jekyll frontmatter title counts as h1, so # heading is a "second" h1
+  "MD025": { "front_matter_title": "" },
+  // Tables and blockquotes with German text exceed 80 chars
+  "MD013": {
+    "line_length": 300,
+    "tables": false
+  }
+}
