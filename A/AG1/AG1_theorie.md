@@ -11,7 +11,7 @@ nav_order: 1
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann erklären, was eine Pure Function ist und welche zwei Eigenschaften sie erfüllen muss. | [Was ist eine Pure Function?](#was-ist-eine-pure-function) |
 | 2 | Ich kann den Unterschied zwischen einer Funktion und einer Prozedur anhand von Codebeispielen erläutern. | [Funktion vs. Prozedur](#funktion-vs-prozedur) |
 | 3 | Ich kann in gegebenem Code erkennen, ob eine Funktion pure ist, und meine Einschätzung begründen. | [Seiteneffekte erkennen](#seiteneffekte-erkennen) |
@@ -23,7 +23,7 @@ nav_order: 1
 Eine Pure Function ist eine Funktion, die **zwei Eigenschaften** gleichzeitig erfüllt:
 
 | Eigenschaft | Beschreibung | Beispiel |
-|-------------|-------------|----------|
+| ------------- | ------------- | ---------- |
 | **Determinismus** | Bei gleichem Input kommt immer der gleiche Output zurück. | `double(3)` ergibt immer `6` |
 | **Keine Seiteneffekte** | Die Funktion verändert keinen Zustand ausserhalb ihrer selbst. | Kein `System.out.println()`, keine Feldänderungen, keine Dateizugriffe |
 
@@ -62,7 +62,7 @@ counter.addToTotal(3); // => 6 (gleicher Input, anderer Output!)
 In der Programmierung unterscheidet man zwischen **Funktionen** und **Prozeduren**:
 
 | | Funktion | Prozedur |
-|---|---------|----------|
+| --- | --------- | ---------- |
 | **Rückgabewert** | Gibt einen Wert zurück | Gibt keinen Wert zurück (`void`) |
 | **Seiteneffekte** | Idealerweise keine | Hat typischerweise Seiteneffekte |
 | **Zweck** | Berechnung eines Ergebnisses | Ausführung einer Aktion |
@@ -120,7 +120,7 @@ class Example {
 ```
 
 | Methode | Pure? | Begründung |
-|---------|-------|------------|
+| --------- | ------- | ------------ |
 | `a(n)` | Ja | Gleicher Input ergibt immer gleichen Output, keine Seiteneffekte. |
 | `b(n)` | Nein | Verändert das statische Feld `x`. Bei gleichem Input kommen unterschiedliche Ergebnisse zurück (`b(1)` ergibt erst `1`, dann `2`, dann `3`...). |
 | `c(n)` | Nein | `System.out.println()` ist ein Seiteneffekt (Konsolenausgabe). |
@@ -128,7 +128,7 @@ class Example {
 ### Warum vermeidet funktionale Programmierung Seiteneffekte?
 
 | Vorteil | Erklärung |
-|---------|-----------|
+| --------- | ----------- |
 | **Vorhersagbarkeit** | Pure Functions verhalten sich immer gleich, unabhängig vom restlichen Programmzustand. |
 | **Testbarkeit** | Man muss keinen globalen Zustand aufsetzen, um eine Funktion zu testen. |
 | **Parallelisierung** | Ohne gemeinsamen Zustand können Funktionen parallel ausgeführt werden, ohne Konflikte. |

@@ -11,7 +11,7 @@ nav_order: 3
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann eine gegebene imperative Anforderung in eine deklarative Anforderung transformieren, die das Endergebnis statt die Arbeitsschritte beschreibt. | [Transformation: Imperativ zu Deklarativ](#transformation-imperativ-zu-deklarativ) |
 | 2 | Ich kann mindestens 2 Informationen benennen, die bei der Transformation verloren gehen, und begründen warum das vorteilhaft ist. | [Was geht bei der Transformation verloren?](#was-geht-bei-der-transformation-verloren) |
 | 3 | Ich kann eine mehrstufige imperative Spezifikation in eine deklarative Anforderung umformulieren. | [Mehrstufige Spezifikationen transformieren](#mehrstufige-spezifikationen-transformieren) |
@@ -35,7 +35,7 @@ Die Grundtechnik: Man streicht die **Schritte** und behält nur das **Ergebnis**
 ### Vorgehen
 
 | Schritt | Aktion | Beispiel |
-|---------|--------|----------|
+| --------- | -------- | ---------- |
 | 1 | Imperative Anforderung lesen | "Gehe durch, prüfe, wende an, speichere" |
 | 2 | Alle Verben streichen, die *Schritte* beschreiben | ~~Gehe durch~~, ~~prüfe~~, ~~wende an~~, ~~speichere~~ |
 | 3 | Das gewünschte **Endergebnis** formulieren | "Produktliste mit reduzierten Preisen" |
@@ -71,7 +71,7 @@ var result = products.stream()
 Bei der Transformation von imperativ zu deklarativ gehen bestimmte Informationen verloren. Das ist **gewollt und vorteilhaft**:
 
 | Verlorene Information | Warum vorteilhaft |
-|----------------------|-------------------|
+| ---------------------- | ------------------- |
 | **Reihenfolge der Ausführung** | Die Laufzeitumgebung kann die effizienteste Reihenfolge selbst wählen, z.B. Parallelisierung. |
 | **Implementierungsdetails** (Schleifen, Zwischenvariablen) | Weniger fehleranfällig, da keine manuelle Schleifenmechanik nötig ist. |
 | **Speicherverwaltung** (wann wird was gespeichert) | Das System kann selbst entscheiden, wann und wie Zwischenergebnisse gespeichert werden. |
@@ -103,7 +103,7 @@ Komplexere imperative Spezifikationen bestehen aus mehreren aufeinanderfolgenden
 ### Weitere Beispiele
 
 | Imperativ (mehrstufig) | Deklarativ (Endergebnis) |
-|----------------------|------------------------|
+| ---------------------- | ------------------------ |
 | "Lies alle Log-Dateien. Parse Timestamps. Filtere nach Fehler-Level. Gruppiere nach Stunde. Zähle pro Gruppe." | "Das Ergebnis ist eine Übersicht der Fehleranzahl pro Stunde, basierend auf allen Log-Dateien." |
 | "Lade alle Bestellungen. Berechne für jede den Gesamtpreis. Filtere Bestellungen unter 10 CHF. Sortiere absteigend nach Preis." | "Das Ergebnis ist eine nach Preis absteigend sortierte Liste aller Bestellungen mit einem Gesamtpreis von mindestens 10 CHF." |
 

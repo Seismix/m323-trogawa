@@ -11,7 +11,7 @@ nav_order: 2
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann einen zu langen Codeabschnitt in eine benannte Funktion extrahieren, um die Lesbarkeit zu verbessern. | [Technik 1: Extract Function](#technik-1-extract-function) |
 | 2 | Ich kann Variablen und Funktionen so umbenennen, dass ihr Zweck klar ersichtlich ist. | [Technik 2: Rename Variable / Function](#technik-2-rename-variable--function) |
 | 3 | Ich kann duplizierten Code erkennen und durch eine gemeinsame Funktion ersetzen. | [Technik 3: Duplikate entfernen](#technik-3-duplikate-entfernen) |
@@ -27,7 +27,7 @@ In dieser Kompetenz geht es darum, Refactoring nicht nur zu kennen, sondern **ak
 3. **Duplikate entfernen:** Gemeinsamen Code in wiederverwendbare Funktionen extrahieren
 
 | Technik | Vorher | Nachher |
-|---------|--------|---------|
+| --------- | -------- | --------- |
 | Extract Function | Monolithische 50-Zeilen-Funktion | Mehrere kleine, fokussierte Funktionen |
 | Rename | `calc(d, r)` | `calculate_discount(days_since_purchase, return_rate)` |
 | Duplikate entfernen | Copy-Paste-Code an 3 Stellen | Eine gemeinsame Funktion |

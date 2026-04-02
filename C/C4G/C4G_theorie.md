@@ -11,7 +11,7 @@ nav_order: 10
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann `map()` verwenden, um eine Transformation auf jedes Element einer Liste anzuwenden. | [1. Map anwenden](#1-map-anwenden) |
 | 2 | Ich kann `filter()` verwenden, um Elemente aus einer Liste nach einem Kriterium auszuwählen. | [2. Filter anwenden](#2-filter-anwenden) |
 | 3 | Ich kann `reduce()` verwenden, um eine Liste auf einen einzelnen Wert zu reduzieren (z.B. Summe berechnen). | [3. Reduce anwenden](#3-reduce-anwenden) |
@@ -23,7 +23,7 @@ nav_order: 10
 In Java werden `map`, `filter` und `reduce` über die **Stream API** verwendet. Ein Stream wird aus einer Collection erzeugt, verarbeitet die Elemente und sammelt das Ergebnis ein.
 
 | Operation | Was sie tut | Eingabe → Ausgabe |
-|-----------|------------|-------------------|
+| ----------- | ------------ | ------------------- |
 | `map()` | Transformiert jedes Element | Stream → Stream (gleiche Anzahl) |
 | `filter()` | Wählt Elemente nach Kriterium | Stream → Stream (gleiche oder weniger Elemente) |
 | `reduce()` | Fasst alle Elemente zusammen | Stream → Einzelwert |
@@ -53,7 +53,7 @@ System.out.println(doubled);  // [2, 4, 6, 8, 10]
 System.out.println(numbers);  // [1, 2, 3, 4, 5] — unverändert
 ```
 
-### Weitere Beispiele
+### Map-Beispiele
 
 ```java
 // Quadratzahlen berechnen
@@ -108,7 +108,7 @@ var even = numbers.stream()
 System.out.println(even);  // [2, 4, 6, 8]
 ```
 
-### Weitere Beispiele
+### Mehr Beispiele
 
 ```java
 // Nur positive Zahlen
@@ -167,7 +167,7 @@ System.out.println(total);  // 15
 Für `reduce(0, (acc, x) -> acc + x)` mit `[1, 2, 3, 4, 5]`:
 
 | Schritt | `acc` | `x` | Ergebnis |
-|---------|-------|-----|----------|
+| ------- | ----- | --- | -------- |
 | Start   | 0     |     | 0        |
 | 1       | 0     | 1   | 1        |
 | 2       | 1     | 2   | 3        |

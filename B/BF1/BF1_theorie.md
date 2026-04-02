@@ -11,7 +11,7 @@ nav_order: 2
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann eine imperative Anforderung in eine deklarative Anforderung umformulieren, die den Endzustand beschreibt. | [Anforderungen deklarativ formulieren](#anforderungen-deklarativ-formulieren) |
 | 2 | Ich kann mindestens 3 Vorteile nennen, warum es vorteilhaft ist, den Endzustand zu beschreiben statt die Arbeitsschritte. | [Warum Endzustand statt Arbeitsschritte?](#warum-endzustand-statt-arbeitsschritte) |
 | 3 | Ich kann für ein praxisnahes Szenario eine deklarative Anforderungsbeschreibung verfassen. | [Praxisbeispiele](#praxisbeispiele) |
@@ -23,14 +23,14 @@ nav_order: 2
 In der deklarativen Programmierung beschreibt man **was** das Ergebnis sein soll, nicht **wie** man dorthin kommt. Dieselbe Idee lässt sich auf Anforderungen übertragen: statt die Schritte aufzulisten, formuliert man das gewünschte Endergebnis.
 
 | | Imperative Anforderung | Deklarative Anforderung |
-|---|----------------------|------------------------|
+| --- | ---------------------- | ------------------------ |
 | **Fokus** | Arbeitsschritte | Endzustand |
 | **Beispiel** | "Iteriere über alle Bestellungen, prüfe den Betrag, füge passende in eine neue Liste" | "Das Ergebnis ist eine Liste aller Bestellungen mit Betrag > 100" |
 
 ### Vorteile der deklarativen Formulierung
 
 | Vorteil | Erklärung |
-|---------|-----------|
+| --------- | ----------- |
 | **Optimierung** | Das System kann die effizienteste Ausführungsstrategie selbst wählen (z.B. Parallelisierung). |
 | **Lesbarkeit** | Die Anforderung ist kürzer und auf einen Blick verständlich. |
 | **Weniger Fehler** | Keine Implementierungsdetails, die falsch umgesetzt werden könnten. |
@@ -45,7 +45,7 @@ Die Technik: Man nimmt eine Schritt-für-Schritt-Beschreibung, streicht das **Wi
 ### Transformationsbeispiele
 
 | Imperativ (Schritte) | Deklarativ (Endzustand) |
-|---------------------|------------------------|
+| --------------------- | ------------------------ |
 | "Iteriere über alle Bestellungen, prüfe ob der Betrag > 100 ist, und füge diese in eine neue Liste ein." | "Das Ergebnis ist eine Liste aller Bestellungen mit einem Betrag grösser als 100." |
 | "Gehe die Benutzerliste durch, prüfe das letzte Login-Datum, sammle E-Mails der inaktiven Benutzer." | "Das Ergebnis ist eine Liste der E-Mail-Adressen aller Benutzer, deren letzter Login mehr als 90 Tage zurückliegt." |
 | "Lies jede Zeile der CSV, parse sie, prüfe die Felder, konvertiere gültige Zeilen zu JSON." | "Das Ergebnis ist eine JSON-Datei mit allen gültigen Datensätzen der CSV-Eingabe." |

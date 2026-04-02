@@ -11,7 +11,7 @@ nav_order: 1
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann anhand eines Beispiels erklären, was imperative Programmierung bedeutet: eine Schritt-für-Schritt-Anweisung, die dem Computer sagt, *wie* etwas zu tun ist. | [Imperativ vs. Deklarativ](#imperativ-vs-deklarativ) |
 | 2 | Ich kann anhand eines Beispiels erklären, was deklarative Programmierung bedeutet: eine Beschreibung des gewünschten Endzustands (*was* erreicht werden soll). | [Imperativ vs. Deklarativ](#imperativ-vs-deklarativ) |
 | 3 | Ich kann gegebene Codebeispiele korrekt als imperativ oder deklarativ einordnen und meine Zuordnung begründen. | [Imperativ oder deklarativ?](#imperativ-oder-deklarativ) |
@@ -24,7 +24,7 @@ nav_order: 1
 Der Kernunterschied lässt sich in einem Satz zusammenfassen:
 
 | Paradigma | Beschreibt | Frage |
-|-----------|-----------|-------|
+| ----------- | ----------- | ------- |
 | **Imperativ** | *Wie* etwas gemacht wird | "Welche Schritte muss ich ausführen?" |
 | **Deklarativ** | *Was* das Ergebnis sein soll | "Wie soll das Endergebnis aussehen?" |
 
@@ -74,7 +74,7 @@ Die Stream-Pipeline beschreibt *was* gewünscht ist: alle `x` grösser als `5`. 
 ### Weitere Beispiele
 
 | Aufgabe | Imperativ | Deklarativ |
-|---------|----------|------------|
+| --------- | ---------- | ------------ |
 | Summe berechnen | `int total = 0; for (var x : list) total += x;` | `list.stream().mapToInt(Integer::intValue).sum()` |
 | Sortieren | Manueller Bubble Sort mit verschachtelten Schleifen | `list.stream().sorted().toList()` |
 | Maximum finden | Schleife mit Vergleich und Zwischenvariable | `list.stream().max(Integer::compareTo)` |
@@ -88,7 +88,7 @@ Bei allen deklarativen Varianten sagt man dem Computer *was* man will, nicht *wi
 Einige Sprachen und Technologien sind von Grund auf deklarativ:
 
 | Sprache/Technologie | Warum deklarativ? | Beispiel |
-|---------------------|------------------|----------|
+| --------------------- | ------------------ | ---------- |
 | **SQL** | Man beschreibt, *welche* Daten man will, nicht *wie* die Datenbank sie sucht. | `SELECT name FROM users WHERE age > 18` |
 | **HTML/CSS** | Man beschreibt, *wie* die Seite aussehen soll, nicht *wie* der Browser sie rendert. | `<h1>Titel</h1>` |
 | **Regular Expressions** | Man beschreibt das *Muster*, nicht den Suchalgorithmus. | `\d{3}-\d{4}` |

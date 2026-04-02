@@ -11,7 +11,7 @@ nav_order: 6
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann für ein gegebenes Problem die effizienteste Datenstruktur auswählen und die Wahl begründen. | [1. Passende Datenstruktur wählen](#1-passende-datenstruktur-wählen) |
 | 2 | Ich kann einen ineffizienten Algorithmus durch einen effizienteren ersetzen. | [2. Algorithmus optimieren: Linear vs. Binary Search](#2-algorithmus-optimieren-linear-vs-binary-search) |
 | 3 | Ich kann anhand eines Beispiels mindestens 2 Trade-offs zwischen Speicherverbrauch und Laufzeit erklären. | [3. Trade-offs: Speicher vs. Laufzeit](#3-trade-offs-speicher-vs-laufzeit) |
@@ -113,7 +113,7 @@ def find_duplicates_with_set(data: list) -> list:
 **Ergebnis:** Die naive Methode ist O(n²), die Set-Methode O(n), braucht dafür O(n) zusätzlichen Speicher für das Set.
 
 | Methode | Zeit | Speicher | Wann verwenden? |
-|---------|------|----------|----------------|
+| --------- | ------ | ---------- | ---------------- |
 | Naive (O(n²)) | Langsam | Minimal | Nur bei sehr kleinen Datenmengen |
 | Set (O(n)) | Schnell | Mehr | Fast immer, der Speicher-Overhead ist minimal |
 
@@ -173,7 +173,7 @@ squares_gen = (x ** 2 for x in range(1_000_000))
 ### Zusammenfassung: 4 Trade-off-Muster
 
 | Trade-off | Mehr Speicher für... | Beispiel |
-|-----------|---------------------|----------|
+| ----------- | --------------------- | ---------- |
 | **Lookup-Struktur** | Schnelleren Zugriff (O(1) statt O(n)) | Set statt Liste für Duplikatsuche |
 | **Caching** | Vermeidung redundanter Berechnungen | Memoization bei rekursiven Funktionen |
 | **Vorberechnung** | Schnellere Abfragen (O(1) statt O(n)) | Prefix-Sum-Array für Bereichssummen |

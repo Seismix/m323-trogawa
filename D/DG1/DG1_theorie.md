@@ -11,7 +11,7 @@ nav_order: 1
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann mindestens 3 Refactoring-Techniken benennen. | [Gängige Refactoring-Techniken](#gängige-refactoring-techniken) (7 Techniken) |
 | 2 | Ich kann für jede Technik erklären, welches Problem sie löst und wie sie die Lesbarkeit verbessert. | **Problem** und **Wie es die Lesbarkeit verbessert** bei jeder Technik |
 | 3 | Ich kann in gegebenem Code typische Code Smells identifizieren, die auf Refactoring-Bedarf hinweisen. | [Code Smells](#code-smells-wann-braucht-es-refactoring) |
@@ -176,7 +176,7 @@ if is_large_order and is_loyal_customer:
 ## Code Smells: Wann braucht es Refactoring?
 
 | Code Smell | Beschreibung | Passende Technik |
-|------------|-------------|-----------------|
+| ------------ | ------------- | ----------------- |
 | **Long Method** | Funktion ist zu lang (>20 Zeilen) | Extract Function |
 | **Magic Numbers** | Zahlen ohne Kontext im Code | Named Constant |
 | **Duplicated Code** | Gleicher Code an mehreren Stellen | Extract Function |

@@ -11,7 +11,7 @@ nav_order: 8
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann Lambda-Ausdrücke mit zwei oder mehr Parametern schreiben (z.B. `lambda x, y: x + y`). | [Multi-Parameter Lambdas](#multi-parameter-lambdas) |
 | 2 | Ich kann einen Multi-Parameter Lambda-Ausdruck als Sortierkriterium einsetzen, um komplexe Datenstrukturen zu ordnen. | [Lambdas als Sortierkriterium](#lambdas-als-sortierkriterium) |
 

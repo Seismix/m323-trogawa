@@ -11,7 +11,7 @@ nav_order: 2
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann erklären, was Immutability bedeutet, und an einem Java-Beispiel zeigen, wie immutable Werte funktionieren. | [Was ist Immutability?](#was-ist-immutability) |
 | 2 | Ich kann anhand eines Codebeispiels erklären, warum referenzierte Objekte in OO-Sprachen problematisch sein können und wie Immutability dieses Problem löst. | [Das Aliasing-Problem](#das-aliasing-problem) |
 | 3 | Ich kann in gegebenem Code erkennen, ob eine Mutation vorliegt, und die funktionale Alternative zeigen. | [Das Aliasing-Problem](#das-aliasing-problem) |
@@ -27,7 +27,7 @@ nav_order: 2
 Java bietet mehrere Mechanismen, um Immutability durchzusetzen:
 
 | Mechanismus | Beschreibung | Beispiel |
-|-------------|-------------|----------|
+| ------------- | ------------- | ---------- |
 | **`final`** | Verhindert die Neuzuweisung einer Variable. | `final int x = 5;` |
 | **`record`** | Erzeugt eine Klasse mit unveränderlichen Feldern. | `record Point(int x, int y) {}` |
 | **`List.of()`** | Erstellt eine unveränderbare Liste. | `List.of(1, 2, 3)` |
@@ -78,7 +78,7 @@ var moreNumbers = Stream.concat(numbers.stream(), Stream.of(4)).toList();
 ## Mutable vs. Immutable in Java
 
 | Mutable (veränderbar) | Immutable (unveränderbar) |
-|----------------------|--------------------------|
+| ---------------------- | -------------------------- |
 | `ArrayList` | `List.of()`, `Collections.unmodifiableList()` |
 | `HashMap` | `Map.of()`, `Collections.unmodifiableMap()` |
 | Klasse mit Settern | `record` |
@@ -102,7 +102,7 @@ System.out.println(textNeu);      // => "HELLO"
 ### Vorteile von Immutability
 
 | Vorteil | Erklärung |
-|---------|-----------|
+| --------- | ----------- |
 | **Vorhersagbarkeit** | Wenn sich Werte nie ändern, gibt es keine Überraschungen. |
 | **Thread-Sicherheit** | Unveränderbare Daten können ohne Locks parallel gelesen werden. |
 | **Einfacheres Debugging** | Man muss nicht suchen, wo ein Wert ungewollt geändert wurde. |
@@ -159,4 +159,5 @@ System.out.println(warenkorb);       // => [Brot, Milch]  (unverändert!)
 System.out.println(neuerWarenkorb);  // => [Brot, Milch, Käse]
 ```
 
-`Stream.concat(...).toList()` erzeugt eine **neue**, unveränderbare Liste. Das Original bleibt unangetastet. Genau das ist das Prinzip der funktionalen Programmierung: statt Daten zu verändern, neue Werte erzeugen. In Java wird dieses Prinzip durch `record`, `List.of()` und die Stream API vom Compiler und der Laufzeit durchgesetzt.
+`Stream.concat(...).toList()` erzeugt eine **neue**, unveränderbare Liste. Das Original bleibt unangetastet. Genau das ist das Prinzip der funktionalen Programmierung: statt Daten zu verändern, neue Werte erzeugen. In Java wird dieses Prinzip durch `record`, `List.of()` und die Stream API vom Compiler
+und der Laufzeit durchgesetzt.

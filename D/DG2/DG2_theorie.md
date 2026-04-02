@@ -11,7 +11,7 @@ nav_order: 4
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann mindestens 3 allgemeine Techniken zur Leistungsverbesserung von Code benennen und deren Einsatzgebiet erklären. | [3 Kerntechniken und ihre Einsatzgebiete](#übersicht-3-kerntechniken-und-ihre-einsatzgebiete) |
 | 2 | Ich kann mindestens 3 verschiedene Arten von Performance-Bottlenecks benennen und je ein Beispiel nennen. | [Performance-Bottleneck-Typen](#performance-bottleneck-typen) |
 | 3 | Ich kann die Zeitkomplexität einfacher Algorithmen einordnen und erklären, warum O(n) besser ist als O(n²). | [Big-O Notation: Grundlagen](#big-o-notation-grundlagen) |
@@ -23,7 +23,7 @@ nav_order: 4
 ### Übersicht: 3 Kerntechniken und ihre Einsatzgebiete
 
 | # | Technik | Einsatzgebiet |
-|---|---------|--------------|
+| --- | --------- | -------------- |
 | 1 | **Caching / Memoization** | Wiederholte teure Berechnungen mit gleichen Inputs (z.B. rekursive Algorithmen, API-Abfragen, Datenbankresultate) |
 | 2 | **Lazy Evaluation** | Grosse Datenmengen, bei denen nur ein Teil tatsächlich gebraucht wird (z.B. Streams, Paginierung, Log-Verarbeitung) |
 | 3 | **Vermeidung unnötiger Berechnungen** | Schleifen und Hot-Paths, in denen sich wiederholende Ausdrücke aus der Schleife herausgezogen werden können |
@@ -121,7 +121,7 @@ arr.sort()
 ## Performance-Bottleneck-Typen
 
 | Typ | Beschreibung | Beispiel |
-|-----|-------------|---------|
+| ----- | ------------- | --------- |
 | **CPU-bound** | Prozessor ist der Engpass (viel Rechenarbeit) | Verschlüsselung, Bildverarbeitung, Sortierung grosser Datenmengen |
 | **Memory-bound** | Speicher ist der Engpass (zu viel RAM-Verbrauch) | Laden einer riesigen Datei komplett in den Speicher |
 | **I/O-bound** | Ein-/Ausgabe ist der Engpass (Warten auf Daten) | Datenbankabfragen, Netzwerk-Requests, Dateizugriffe |
@@ -135,7 +135,7 @@ arr.sort()
 Die Big-O-Notation beschreibt, wie die Laufzeit eines Algorithmus mit der Eingabegrösse wächst.
 
 | Notation | Name | Beispiel | 1'000 Elemente |
-|----------|------|---------|----------------|
+| ---------- | ------ | --------- | ---------------- |
 | **O(1)** | Konstant | Dictionary-Lookup | 1 Operation |
 | **O(log n)** | Logarithmisch | Binäre Suche | ~10 Operationen |
 | **O(n)** | Linear | Liste durchsuchen | 1'000 Operationen |
@@ -145,7 +145,7 @@ Die Big-O-Notation beschreibt, wie die Laufzeit eines Algorithmus mit der Eingab
 
 ### Warum ist O(n) besser als O(n²)?
 
-```
+```text
 Eingabe:  n = 1'000
 O(n):     1'000 Operationen        → Millisekunden
 O(n²):    1'000'000 Operationen    → Merklich langsamer

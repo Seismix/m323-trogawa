@@ -11,7 +11,7 @@ nav_order: 4
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann eine Funktion in einer Variable speichern und diese Variable aufrufen, um die Funktion auszuführen. | [1. Funktion einer Variable zuweisen](#1-funktion-einer-variable-zuweisen) |
 | 2 | Ich kann eine Funktion schreiben, die eine andere Funktion zurückgibt. | [2. Funktion als Rückgabewert](#2-funktion-als-rückgabewert) |
 | 3 | Ich kann Funktionen in Listen oder Dictionaries speichern und gezielt abrufen. | [3. Funktionen in Datenstrukturen speichern](#3-funktionen-in-datenstrukturen-speichern) |

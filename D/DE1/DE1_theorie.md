@@ -11,7 +11,7 @@ nav_order: 3
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann für ein gegebenes Refactoring mindestens 3 Unit-Tests definieren, die sicherstellen, dass das Verhalten einer Funktion unverändert bleibt. | [3 Unit-Tests zur Verhaltensabsicherung](#3-unit-tests-zur-verhaltensabsicherung) |
 | 2 | Ich kann für ein gegebenes Refactoring mindestens 3 potenzielle Nebeneffekte identifizieren und für jede eine Gegenmassnahme vorschlagen. | [3 potenzielle Nebeneffekte + Gegenmassnahmen](#3-potenzielle-nebeneffekte--gegenmassnahmen) |
 | 3 | Ich kann für eine gegebene Codebasis mindestens 3 Schritte einer sicheren Refactoring-Strategie beschreiben, die testbar bleibt. | [Refactoring-Strategie wählen](#refactoring-strategie-wählen) |
@@ -100,7 +100,7 @@ class TestShippingBehavior(unittest.TestCase):
 ## 3 potenzielle Nebeneffekte + Gegenmassnahmen
 
 | # | Nebeneffekt | Gegenmassnahme |
-|---|------------|----------------|
+| --- | ------------ | ---------------- |
 | 1 | **Unbekannte Destinationen:** Beim Refactoring zu einem Dictionary könnte man vergessen, einen Fallback einzubauen → `KeyError` statt Welt-Tarif | `dict.get()` mit explizitem Fallback auf `"WORLD"`. Test 3 prüft das Verhalten. |
 | 2 | **Reihenfolge der Gewichtsstufen:** Tiers im Dictionary könnten vertauscht sein → ein 0.5kg-Paket fällt in den 20kg-Tarif | Tiers explizit aufsteigend definieren. Test 1 prüft die Grenzwerte exakt. |
 | 3 | **Rundungsdifferenzen:** Geänderte Berechnungsreihenfolge kann Gleitkomma-Abweichungen erzeugen | `round(cost, 2)` am Ende beibehalten + Tests mit exakten Erwartungswerten. |
@@ -121,7 +121,7 @@ Eine sichere Strategie folgt immer demselben Muster:
 ### Beispiel: Strategie für die Versandkosten-Funktion
 
 | Schritt | Änderung | Risiko | Test danach |
-|---------|----------|--------|-------------|
+| --------- | ---------- | -------- | ------------- |
 | A | Tarife in Datenstruktur extrahieren | Werte könnten falsch übertragen werden | Alle 3 Tests laufen lassen |
 | B | `get_zone()` mit Fallback einführen | Unbekannte Destinationen | Test 3 (unknown destination) |
 | C | `calculate_weight_cost()` extrahieren | Reihenfolge der Tiers | Test 1 (Grenzwerte) |

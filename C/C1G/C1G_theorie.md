@@ -11,7 +11,7 @@ nav_order: 1
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann in eigenen Worten erklären, was ein Algorithmus ist und welche Eigenschaften er hat (Endlichkeit, Determiniertheit, Ein-/Ausgabe). | [1. Algorithmus-Begriff definieren](#1-algorithmus-begriff-definieren) |
 | 2 | Ich kann einen gegebenen Algorithmus Schritt für Schritt durchgehen und das Ergebnis für einen bestimmten Input vorhersagen. | [2. Algorithmus nachvollziehen](#2-algorithmus-nachvollziehen) |
 | 3 | Ich kann einen einfachen Algorithmus (z.B. Sortierung, Suche) in Pseudocode oder natürlicher Sprache beschreiben. | [3. Algorithmus beschreiben](#3-algorithmus-beschreiben) |
@@ -23,7 +23,7 @@ nav_order: 1
 Ein **Algorithmus** ist eine eindeutige, endliche Abfolge von Schritten, die ein Problem löst. Jeder Algorithmus hat drei zentrale Eigenschaften:
 
 | Eigenschaft | Bedeutung | Beispiel |
-|-------------|-----------|----------|
+| ------------- | ----------- | ---------- |
 | **Endlichkeit** | Der Algorithmus terminiert nach endlich vielen Schritten | Eine Schleife über eine Liste endet, wenn alle Elemente verarbeitet sind |
 | **Determiniertheit** | Bei gleicher Eingabe liefert er immer das gleiche Ergebnis | `Collections.max(List.of(3, 1, 2))` gibt immer `3` zurück |
 | **Ein-/Ausgabe** | Er nimmt Eingaben entgegen und produziert eine Ausgabe | Eingabe: unsortierte Liste, Ausgabe: sortierte Liste |
@@ -57,7 +57,7 @@ int findMax(List<Integer> numbers) {
 ### Schritt-für-Schritt-Durchlauf mit `[3, 7, 2, 9, 4]`
 
 | Schritt | `number` | `currentMax` | Bedingung `number > currentMax` |
-|---------|----------|--------------|----------------------------------|
+| --------- | ---------- | -------------- | ---------------------------------- |
 | Start   |          | 3            |                                  |
 | 1       | 3        | 3            | 3 > 3? Nein                      |
 | 2       | 7        | 7            | 7 > 3? Ja → update              |
@@ -82,7 +82,7 @@ int total(List<Integer> numbers) {
 Durchlauf mit `[10, 20, 30]`:
 
 | Schritt | `number` | `result` |
-|---------|----------|----------|
+| --------- | ---------- | ---------- |
 | Start   |          | 0        |
 | 1       | 10       | 10       |
 | 2       | 20       | 30       |

@@ -11,7 +11,7 @@ nav_order: 7
 ## Lernziele
 
 | # | Lernziel | Beantwortet in |
-|---|----------|----------------|
+| --- | ---------- | ---------------- |
 | 1 | Ich kann eine Lambda-Funktion schreiben, die eine einfache Berechnung durchführt (z.B. `lambda x: x ** 2`). | [1. Einzeilige Lambda-Funktion](#1-einzeilige-lambda-funktion) |
 | 2 | Ich kann eine Lambda-Funktion schreiben, die eine String-Transformation durchführt (z.B. Grossbuchstaben-Konvertierung). | [2. Lambda mit String-Operation](#2-lambda-mit-string-operation) |
 | 3 | Ich kann erklären, wann ein Lambda-Ausdruck sinnvoller ist als eine benannte Funktion und umgekehrt. | [3. Lambda vs. benannte Funktion](#3-lambda-vs-benannte-funktion) |
@@ -93,7 +93,7 @@ System.out.println(cleaned);  // [Alice, Bob, Charlie]
 ## 3. Lambda vs. benannte Funktion
 
 | Kriterium | Lambda | Benannte Methode |
-|-----------|--------|------------------|
+| ----------- | -------- | ------------------ |
 | **Umfang** | Ein Ausdruck oder kurzer Block | Beliebig viele Zeilen |
 | **Name** | Anonym | Sprechender Methodenname |
 | **Wiederverwendung** | Für einmaligen Gebrauch | Für mehrfachen Aufruf |
