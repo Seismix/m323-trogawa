@@ -84,15 +84,14 @@ System.out.println(totalChars);
 Die vollständige Pipeline: filtern, transformieren, aggregieren.
 
 ```java
-// Durchschnittspreis aller Produkte über 10 CHF
+// Summe aller verdoppelten Preise über 10 CHF
 var prices = List.of(5.0, 15.0, 8.0, 20.0, 3.0, 12.0);
 
-var avg = prices.stream()
-    .filter(p -> p > 10)                    // [15.0, 20.0, 12.0]
-    .mapToDouble(Double::doubleValue)       // DoubleStream
-    .average()                              // OptionalDouble
-    .orElse(0.0);                           // 15.666...
-System.out.println(avg);
+var sum = prices.stream()
+    .filter(p -> p > 10)               // [15.0, 20.0, 12.0]
+    .map(p -> p * 2)                   // [30.0, 40.0, 24.0]
+    .reduce(0.0, Double::sum);         // 94.0
+System.out.println(sum);
 ```
 
 ### Praxisbeispiel: Lohnsumme
