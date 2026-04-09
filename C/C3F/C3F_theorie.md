@@ -14,6 +14,7 @@ nav_order: 8
 | --- | ---------- | ---------------- |
 | 1 | Ich kann Lambda-Ausdrücke mit zwei oder mehr Parametern schreiben (z.B. `lambda x, y: x + y`). | [Multi-Parameter Lambdas](#multi-parameter-lambdas) |
 | 2 | Ich kann einen Multi-Parameter Lambda-Ausdruck als Sortierkriterium einsetzen, um komplexe Datenstrukturen zu ordnen. | [Lambdas als Sortierkriterium](#lambdas-als-sortierkriterium) |
+| 3 | Ich kann für einen Lambda-Ausdruck mit mehreren Parametern das passende funktionale Interface (z.B. BiFunction, BinaryOperator) in Java benennen. | [Funktionale Interfaces für Multi-Parameter Lambdas](#funktionale-interfaces-für-multi-parameter-lambdas) |
 
 ---
 
@@ -83,3 +84,39 @@ var sorted = products.stream()
     .toList();
 // => [Milch, Brot, Käse]
 ```
+
+---
+
+## Funktionale Interfaces für Multi-Parameter Lambdas
+
+In Java braucht jeder Lambda-Ausdruck ein **funktionales Interface** als Zieltyp. Für Multi-Parameter Lambdas stellt `java.util.function` passende Interfaces bereit:
+
+| Interface | Parameter | Rückgabe | Typischer Einsatz |
+| ----------- | ----------- | ---------- | -------------------- |
+| `BiFunction<T, U, R>` | 2 (verschiedene Typen möglich) | `R` | Allgemeine Verarbeitung |
+| `BinaryOperator<T>` | 2 (gleicher Typ) | `T` | Mathematische Operationen |
+| `BiConsumer<T, U>` | 2 | `void` | Seiteneffekte (z.B. Map befüllen) |
+| `BiPredicate<T, U>` | 2 | `boolean` | Vergleiche, Validierung |
+
+### Beispiel: Interface-Wahl
+
+```java
+// Zwei verschiedene Typen → BiFunction
+BiFunction<String, Integer, String> repeat = (s, n) -> s.repeat(n);
+repeat.apply("Ha", 3);  // => "HaHaHa"
+
+// Zwei gleiche Typen, gleicher Rückgabetyp → BinaryOperator
+BinaryOperator<Integer> max = (a, b) -> a > b ? a : b;
+max.apply(7, 3);  // => 7
+
+// Zwei Parameter, kein Rückgabewert → BiConsumer
+BiConsumer<String, Integer> printEntry = (key, val) ->
+    System.out.println(key + ": " + val);
+printEntry.accept("Score", 42);  // Score: 42
+
+// Zwei Parameter, boolean → BiPredicate
+BiPredicate<String, Integer> hasLength = (s, len) -> s.length() == len;
+hasLength.test("Hallo", 5);  // => true
+```
+
+`BinaryOperator<T>` ist ein Spezialfall von `BiFunction<T, T, T>`. Wenn Ein- und Ausgabetyp identisch sind, ist `BinaryOperator` die passendere Wahl.
