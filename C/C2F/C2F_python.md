@@ -1,5 +1,5 @@
 ---
-title: "C2F"
+title: "C2F Python"
 parent: "C - Umsetzung"
 nav_order: 5
 ---

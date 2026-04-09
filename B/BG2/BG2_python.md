@@ -1,5 +1,5 @@
 ---
-title: "BG2"
+title: "BG2 Python"
 parent: "B - Anforderungen & Design"
 nav_order: 4
 ---
