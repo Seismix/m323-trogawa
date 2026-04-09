@@ -31,6 +31,7 @@ Ein **Algorithmus** ist eine eindeutige, endliche Abfolge von Schritten, die ein
 ### Alltagsbeispiel
 
 Ein Kochrezept ist ein Algorithmus:
+
 - **Eingabe:** Zutaten
 - **Schritte:** Schneiden, Mischen, Kochen (endlich viele)
 - **Ausgabe:** Fertiges Gericht
@@ -57,13 +58,13 @@ int findMax(List<Integer> numbers) {
 ### Schritt-für-Schritt-Durchlauf mit `[3, 7, 2, 9, 4]`
 
 | Schritt | `number` | `currentMax` | Bedingung `number > currentMax` |
-| --------- | ---------- | -------------- | ---------------------------------- |
-| Start   |          | 3            |                                  |
-| 1       | 3        | 3            | 3 > 3? Nein                      |
+| ------- | -------- | ------------ | ------------------------------- |
+| Start   |          | 3            |                                 |
+| 1       | 3        | 3            | 3 > 3? Nein                     |
 | 2       | 7        | 7            | 7 > 3? Ja → update              |
-| 3       | 2        | 7            | 2 > 7? Nein                      |
+| 3       | 2        | 7            | 2 > 7? Nein                     |
 | 4       | 9        | 9            | 9 > 7? Ja → update              |
-| 5       | 4        | 9            | 4 > 9? Nein                      |
+| 5       | 4        | 9            | 4 > 9? Nein                     |
 
 **Ergebnis:** `9`
 
@@ -82,7 +83,7 @@ int total(List<Integer> numbers) {
 Durchlauf mit `[10, 20, 30]`:
 
 | Schritt | `number` | `result` |
-| --------- | ---------- | ---------- |
+| ------- | -------- | -------- |
 | Start   |          | 0        |
 | 1       | 10       | 10       |
 | 2       | 20       | 30       |
@@ -99,6 +100,7 @@ Durchlauf mit `[10, 20, 30]`:
 **Problem:** Finde heraus, ob ein bestimmter Wert in einer Liste vorkommt.
 
 **Beschreibung:**
+
 1. Gehe die Liste Element für Element durch.
 2. Vergleiche jedes Element mit dem gesuchten Wert.
 3. Falls ein Element übereinstimmt: gib dessen Position zurück.
@@ -124,7 +126,7 @@ System.out.println(linearSearch(items, "x"));  // -1
 
 **Problem:** Sortiere eine Liste von Zahlen aufsteigend.
 
-```
+```text
 ALGORITHMUS bubble_sort(liste):
     WIEDERHOLE solange Tausch stattfindet:
         FÜR jedes benachbarte Paar (i, i+1):
